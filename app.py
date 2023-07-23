@@ -192,6 +192,8 @@ agent = initialize_agent(
 
 
 # 5. Set this as a CLI application
+import datetime
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='AI Research Agent')
     parser.add_argument('query', type=str, help='The research goal')
@@ -199,3 +201,8 @@ if __name__ == "__main__":
 
     content = agent({"input": args.query})
     print(content['output'])
+
+    # Save the output to a text file
+    timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
+    with open(f"{timestamp}.txt", "w") as file:
+        file.write(content['output'])
