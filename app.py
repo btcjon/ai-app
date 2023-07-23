@@ -16,7 +16,7 @@ from bs4 import BeautifulSoup
 import requests
 import json
 from langchain.schema import SystemMessage
-from fastapi import FastAPI
+import argparse
 
 load_dotenv()
 openai_api_key = os.getenv("OPENAI_API_KEY")
@@ -191,17 +191,11 @@ agent = initialize_agent(
 #     main()
 
 
-# 5. Set this as an API endpoint via FastAPI
-app = FastAPI()
+# 5. Set this as a CLI application
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='AI Research Agent')
+    parser.add_argument('query', type=str, help='The research goal')
+    args = parser.parse_args()
 
-
-class Query(BaseModel):
-    query: str
-
-
-@app.post("/")
-def researchAgent(query: Query):
-    query = query.query
-    content = agent({"input": query})
-    actual_content = content['output']
-    return actual_content
+    content = agent({"input": args.query})
+    print(content['output'])
