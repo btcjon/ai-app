@@ -202,7 +202,8 @@ if __name__ == "__main__":
     content = agent({"input": args.query})
     print(content['output'])
 
-    # Save the output to a text file
+    # Save the output to a text file in the workspace folder
+    folder_path = "workspace/"
     timestamp = datetime.datetime.now().strftime("%Y%m%d%H%M%S")
-    with open(f"{timestamp}.txt", "w") as file:
+    with open(f"{folder_path}{timestamp}.txt", "w") as file:
         file.write(content['output'])
