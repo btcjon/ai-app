@@ -34,7 +34,7 @@ def search(query):
     })
 
     headers = {
-        'X-API-KEY': serper_api_key,
+        'X-API-KEY': serp_api_key,
         'Content-Type': 'application/json'
     }
 
