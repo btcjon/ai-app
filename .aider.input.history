@@ -1,0 +1,27 @@
+
+# 2023-07-23 06:13:58.863980
++explain this app please
+
+# 2023-07-23 06:14:51.365588
++can you make .env and add the necessary items?
+
+# 2023-07-23 06:21:03.277499
++can we make OPENAI_API_KEY to be referenced to the .env file
+
+# 2023-07-23 06:23:13.004578
++if I want to have this app to be interacted by user in CLI instead of fastAPI how could I do it?
+
+# 2023-07-23 06:25:34.780387
++where would the output go if using from CLI? can the output also be saved as a text file with some sort of identifying name as title of file?
+
+# 2023-07-23 06:26:18.621223
++make the output text files to be saved in workspace folder please
+
+# 2023-07-23 06:27:38.655744
++/run app.py "new apple airpods details"
+
+# 2023-07-23 06:28:14.560667
++/run python app.py "new apple airpods details" 
+
+# 2023-07-23 06:46:48.084923
++update my git please
